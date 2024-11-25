@@ -1,0 +1,26 @@
+.artilheiro{
+  display: flex;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #777;
+  padding: .5rem 1rem;
+}
+
+
+.player, .infos{
+  display: flex;
+  min-width: 30%;
+}
+
+.player{
+  gap: 1rem;
+}
+
+.infos{
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.infos h4{
+  width: 10%;
+}

@@ -1,0 +1,26 @@
+.tabela{
+  display: flex;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #777;
+  padding: .5rem 1rem;
+}
+
+
+.matches, .position{
+  display: flex;
+  min-width: 30%;
+}
+
+.position{
+  gap: 1rem;
+}
+
+.matches{
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tabela .matches h4{
+  width: 10%;
+}
