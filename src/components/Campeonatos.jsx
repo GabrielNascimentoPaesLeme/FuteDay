@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import blogAxios from '../axios/config';
+import axiosConfig from '../axios/config';
 import { Link } from 'react-router-dom';
 
 const Campeonatos = () => {
   const [competitions, setCompetitions] = useState([]);
   const [showAll, setShowAll] = useState(false);
+  const { blogAxios, axiosFootball } = axiosConfig;
 
   const getCompetitions = async () => {
     try {
@@ -45,7 +46,7 @@ const Campeonatos = () => {
       </div>
       {competitions.length > 6 && (
         <button onClick={handleToggleView} className="btn btn-toggle">
-          {showAll ? 'Ver menos campeonatos' : 'Ver todos os campeonatos'}
+          {showAll ? 'Menos campeonatos' : 'Mais campeonatos'}
         </button>
       )}
     </div>

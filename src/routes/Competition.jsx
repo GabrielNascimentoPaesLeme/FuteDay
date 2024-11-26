@@ -9,7 +9,7 @@ const Competition = () => {
   return (
     <div className='container-champ'>
         <Link to={`/competitions/${code}/tabela`} className="classificacao">
-          <h1>Tabela Classificatória</h1>
+          <h1>Classificação</h1>
         </Link>
         <Link to={`/competitions/${code}/artilharia`} className="artilharia">
           <h1>Artilharia</h1>
