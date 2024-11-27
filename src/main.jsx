@@ -9,6 +9,7 @@ import Tabela from './routes/Tabela.jsx';
 import Competition from './routes/Competition.jsx';
 import Partida from './routes/Partida.jsx';
 import Artilharia from './routes/Artilharia.jsx';
+import Assistencias from './routes/Assistencias.jsx';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/competitions/:code/tabela',
+        path: '/competitions/:id/tabela',
         element: <Tabela />,
       },
       {
@@ -31,8 +32,12 @@ const router = createBrowserRouter([
         element: <Partida/>,
       },
       {
-        path: '/competitions/:code/artilharia',
+        path: '/competitions/:id/artilharia',
         element: <Artilharia/>
+      },
+      {
+        path: '/competitions/:id/assistencias',
+        element: <Assistencias/>
       }
     ],
   },

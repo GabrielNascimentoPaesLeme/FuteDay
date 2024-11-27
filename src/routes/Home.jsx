@@ -12,10 +12,19 @@ const Home = () => {
   const [liveMatches, setLiveMatches] = useState([]);
   const [competitionsFootball, setCompetitionsFootball] = useState([]);
 
-  const ccodes = ['BRA', 'ARG', 'ENG', 'ESP', 'POR', 'GER', 'FRA', 'ITA', 'KSA']
+  const ccodes = [
+    'BRA',
+    'ARG',
+    'ENG',
+    'ESP',
+    'POR',
+    'GER',
+    'FRA',
+    'ITA',
+    'KSA',
+  ];
 
   const { axiosFootball } = axiosConfig;
-
 
   const getMatches = async () => {
     const date = new Date();
@@ -40,9 +49,7 @@ const Home = () => {
 
       const responseLiveMatch = await axiosFootball.get(
         `/football-current-live`
-      )
-
-      console.log(responseLiveMatch)
+      );
 
       const allMatches = [
         ...response.data.response.matches,
@@ -66,8 +73,9 @@ const Home = () => {
         );
       });
 
-      setLiveMatches(responseLiveMatch.data.response.live)
+      setLiveMatches(responseLiveMatch.data.response.live);
       setMatches(todayMatches);
+      console.log(todayMatches[0].id)
     } catch (error) {
       console.log(error);
     }
@@ -78,13 +86,12 @@ const Home = () => {
       const responseChamps = await axiosFootball.get(
         '/football-get-all-leagues-with-countries'
       );
-      console.log(responseChamps.data.response.leagues);
       setCompetitionsFootball(responseChamps.data.response.leagues);
     } catch (error) {
       console.log(error);
     }
   };
-  
+
   useEffect(() => {
     getMatches();
     getCompetitions();
@@ -92,9 +99,12 @@ const Home = () => {
 
   return (
     <div className="container-home">
-      <Campeonatos ccodes={ccodes} competitionsFootball={competitionsFootball}/>
-      <JogosLive matches={matches} liveMatches={liveMatches}/>
-      <Jogos matches={matches}/>
+      <Campeonatos
+        ccodes={ccodes}
+        competitionsFootball={competitionsFootball}
+      />
+      <JogosLive matches={matches} liveMatches={liveMatches} />
+      <Jogos matches={matches} />
     </div>
   );
 };
