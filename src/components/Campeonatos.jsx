@@ -17,7 +17,7 @@ const Campeonatos = ({ccodes, competitionsFootball}) => {
     : filteredCompetitions.slice(0, 6);
 
   return (
-    <div className="container-competitions">
+    <section className="container-competitions">
       <h1>Principais Campeonatos</h1>
       <div className="campeonatos">
         {filteredCompetitions.length === 0 ? (
@@ -39,7 +39,7 @@ const Campeonatos = ({ccodes, competitionsFootball}) => {
           {showAll ? 'Menos campeonatos' : 'Mais campeonatos'}
         </button>
       )}
-    </div>
+    </section>
   );
 };
 

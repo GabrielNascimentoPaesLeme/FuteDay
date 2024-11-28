@@ -103,7 +103,7 @@ const Home = () => {
         ccodes={ccodes}
         competitionsFootball={competitionsFootball}
       />
-      <JogosLive matches={matches} liveMatches={liveMatches} />
+      <JogosLive liveMatches={liveMatches} />
       <Jogos matches={matches} />
     </div>
   );

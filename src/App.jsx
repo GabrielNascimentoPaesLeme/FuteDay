@@ -10,9 +10,9 @@ function App() {
   return (
     <div>
       <Nav/>
-      <div className='container-app'>
+      <main className='container-app'>
         <Outlet/>
-      </div>
+      </main>
     </div>
   );
 }

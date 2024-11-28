@@ -49,7 +49,7 @@ const Competition = () => {
   console.log(competitionsFootball);
 
   return (
-    <div className="container-champ">
+    <section className="container-champ">
       <h1>Principais Campeonatos</h1>
       <div className="champ">
         {filteredLeagues.length === 0 ? (
@@ -82,7 +82,7 @@ const Competition = () => {
           ))
         )}
       </div>
-    </div>
+    </section>
   );
 };
 

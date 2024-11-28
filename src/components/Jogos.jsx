@@ -18,7 +18,7 @@ const Jogos = ({ matches }) => {
       : upcomingMatches.slice(0, 6);
 
   return (
-    <div className="container-competitions">
+    <section className="container-competitions">
       <h1>Jogos Do Dia</h1>
       <div className="jogos">
         {matches.length === 0 ? (
@@ -51,7 +51,7 @@ const Jogos = ({ matches }) => {
           {showAllTodayMatches ? 'Ver menos Jogos' : 'Ver todos os jogos'}
         </button>
       )}
-    </div>
+    </section>
   );
 };
 
